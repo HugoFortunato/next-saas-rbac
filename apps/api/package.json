@@ -5,8 +5,14 @@
         "dev": "tsx watch src/http/server.ts"
     },
     "dependencies": {
+        "@faker-js/faker": "^9.3.0",
         "@fastify/cors": "^10.0.1",
+        "@fastify/jwt": "^9.0.1",
+        "@fastify/swagger": "^9.4.0",
+        "@fastify/swagger-ui": "^5.2.0",
+        "@prisma/client": "6.0.1",
         "@saas/auth": "workspace:*",
+        "bcryptjs": "^2.4.3",
         "fastify": "^5.1.0",
         "fastify-type-provider-zod": "^4.0.2",
         "zod": "^3.22.4"
@@ -15,9 +21,13 @@
         "@saas/eslint-config": "workspace:*",
         "@saas/prettier": "workspace:*",
         "@saas/tsconfig": "workspace:*",
+        "@types/bcryptjs": "^2.4.6",
         "@types/node": "^20.17.9",
         "prisma": "^6.0.1",
         "tsx": "^4.19.2"
+    },
+    "prisma": {
+        "seed": "tsx prisma/seed.ts"
     },
     "prettier": "@saas/prettier",
     "eslintConfig": {
