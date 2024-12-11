@@ -1,3 +1,14 @@
+# Important commands
+
+pnpm run dev
+
+pnpm prisma init
+pnpm prisma studio
+pnpm prisma db seed
+pnpm prisma migrate dev
+
+To see the swagger, just check the route in server.ts. Prob will be "/docs". Run https://localhost:3333/docs
+
 # Next.js SaaS + RBAC
 
 This project contains all the necessary boilerplate to setup a multi-tenant SaaS with Next.js including authentication and RBAC authorization.
