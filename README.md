@@ -1,11 +1,21 @@
 # Important commands
 
+## pnpm
+
 pnpm run dev
 
 pnpm prisma init
 pnpm prisma studio
 pnpm prisma db seed
 pnpm prisma migrate dev
+
+## docker
+
+docker compose up -d
+
+## github auth
+
+https://github.com/login/oauth/authorize?client_id=Ov23li6LAAuYaiAn1gmY&redirect_url=http://localhost:3000/api/auth/callback&scope=user:email
 
 To see the swagger, just check the route in server.ts. Prob will be "/docs". Run https://localhost:3333/docs
 
