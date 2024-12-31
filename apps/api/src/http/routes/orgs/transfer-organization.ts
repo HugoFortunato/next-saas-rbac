@@ -40,6 +40,7 @@ export async function transferOrganization(app: FastifyInstance) {
           await request.getUserMembership(slug)
 
         const authOrganization = organizationSchema.parse(organization)
+        console.log('Membership role:', membership.role)
 
         const { cannot } = getUserPermissions(userId, membership.role)
 
