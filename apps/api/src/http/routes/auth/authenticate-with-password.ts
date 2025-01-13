@@ -32,7 +32,6 @@ export async function authenticateWithPassword(app: FastifyInstance) {
           email,
         },
       })
-      console.log(userFromEmail?.id, 'iddd')
 
       if (!userFromEmail) {
         throw new BadRequestError('Invalid credentials.')

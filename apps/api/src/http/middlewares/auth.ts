@@ -11,8 +11,6 @@ export const auth = fastifyPlugin(async (app: FastifyInstance) => {
         //sub and userId are the same
         const { sub } = await request.jwtVerify<{ sub: string }>()
 
-        console.log(sub, 'subbbbbbb')
-
         return sub
       } catch {
         throw new UnauthorizedError('Invalid token')
