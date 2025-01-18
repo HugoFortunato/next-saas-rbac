@@ -17,11 +17,11 @@ export function ThemeSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <div className="cursor-pointer hover:text-muted-foreground">
           <Sun className="size-4 dark:invisible dark:size-0" />
           <Moon className="invisible size-0 dark:visible dark:size-4" />
           <span className="sr-only">Toggle theme</span>
-        </Button>
+        </div>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent align="end">
