@@ -13,6 +13,12 @@ pnpm prisma migrate dev
 
 docker compose up -d
 
+## clean port 3333
+
+sudo ss -tuln | grep 3333
+sudo lsof -i:3333
+sudo kill -9 PID
+
 ## github auth
 
 https://github.com/login/oauth/authorize?client_id=Ov23li6LAAuYaiAn1gmY&redirect_url=http://localhost:3000/api/auth/callback&scope=user:email
