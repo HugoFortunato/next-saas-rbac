@@ -12,6 +12,8 @@ import { ShutdownOrganizationButton } from './shutdown-organization-button'
 import { getOrganization } from '@/http/get-organization'
 import { Billing } from './billing'
 
+//comment
+
 export default async function Settings(props: { params: Params }) {
   const currentOrg = (await props.params).slug
   const permissions = await ability()
