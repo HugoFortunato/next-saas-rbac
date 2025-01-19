@@ -18,6 +18,7 @@ export function ProjectForm() {
 
   const [{ errors, message, success }, handleSubmit, isPending] = useFormState(
     createProjectAction,
+    org,
     () => {
       queryClient.invalidateQueries({
         queryKey: [org, 'projects'],

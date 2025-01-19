@@ -9,7 +9,7 @@ interface FormState {
 
 export function useFormState(
   action: (data: FormData, currentOrg: string) => Promise<FormState>,
-  currentOrg: string,
+  currentOrg?: string,
   onSuccess?: () => Promise<void> | void,
   initialState?: FormState
 ) {
@@ -26,7 +26,7 @@ export function useFormState(
     const data = new FormData(form)
 
     startTransition(async () => {
-      const state = await action(data, currentOrg)
+      const state = await action(data, currentOrg ?? '')
 
       if (state.success && onSuccess) {
         await onSuccess()
