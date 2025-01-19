@@ -12,10 +12,8 @@ import { ShutdownOrganizationButton } from './shutdown-organization-button'
 import { getOrganization } from '@/http/get-organization'
 import { Billing } from './billing'
 
-export default async function Settings({
-  params,
-}: Readonly<{ params: { slug: string } }>) {
-  const currentOrg = params.slug
+export default async function Settings(props: { params: Params }) {
+  const currentOrg = (await props.params).slug
   const permissions = await ability()
 
   const canUpdateOrganization = permissions?.can('update', 'Organization')

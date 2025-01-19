@@ -3,10 +3,9 @@ import { ability } from '@/auth/auth'
 import { Invites } from './invites'
 import { MemberList } from './member-list'
 
-export default async function MembersPage({
-  params,
-}: Readonly<{ params: { slug: string } }>) {
-  const currentOrg = params.slug
+export default async function MembersPage(props: { params: Params }) {
+  const params = props.params
+  const currentOrg = (await params).slug
 
   const permissions = await ability()
 
